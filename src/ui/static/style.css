@@ -1,0 +1,98 @@
+/* Basic, clean styling — intentionally simple. */
+
+* { box-sizing: border-box; }
+
+body {
+    font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    margin: 0;
+    background: #f4f5f7;
+    color: #1f2933;
+    line-height: 1.5;
+}
+
+header {
+    background: #1f3a5f;
+    color: #fff;
+    padding: 16px 24px;
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+header .brand { color: #fff; text-decoration: none; font-size: 1.25rem; font-weight: 600; }
+
+main {
+    max-width: 900px;
+    margin: 24px auto;
+    padding: 0 16px;
+}
+
+/* Cards */
+.card {
+    background: #fff;
+    border: 1px solid #e2e6eb;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+}
+.card h2, .card h3 { margin-top: 0; }
+
+/* Layout helpers */
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.grid-3 { grid-template-columns: 1fr 1fr 1fr; }
+@media (max-width: 640px) { .grid, .grid-3 { grid-template-columns: 1fr; } }
+
+/* Forms */
+label { display: block; font-size: 0.85rem; color: #52606d; margin: 10px 0 4px; }
+input, select {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #cbd2d9;
+    border-radius: 6px;
+    font-size: 0.95rem;
+}
+button {
+    margin-top: 14px;
+    width: 100%;
+    padding: 9px 12px;
+    background: #1f3a5f;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+button:hover { background: #16294f; }
+
+/* Tables */
+table { width: 100%; border-collapse: collapse; }
+th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #eceff1; }
+th { font-size: 0.8rem; text-transform: uppercase; color: #7b8794; letter-spacing: 0.03em; }
+.balance { font-variant-numeric: tabular-nums; font-weight: 600; }
+
+/* Links / buttons in tables */
+.btn-link { color: #1f3a5f; text-decoration: none; font-weight: 600; }
+.btn-link:hover { text-decoration: underline; }
+.back { display: inline-block; margin-bottom: 16px; color: #52606d; text-decoration: none; }
+.back:hover { text-decoration: underline; }
+
+/* Account detail header */
+.account-header { display: flex; justify-content: space-between; align-items: center; }
+.big-balance { text-align: right; }
+.big-balance .label { display: block; font-size: 0.75rem; color: #7b8794; text-transform: uppercase; }
+.big-balance .value { font-size: 2rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+
+/* Flash messages */
+.flash { padding: 10px 14px; border-radius: 6px; margin-bottom: 16px; font-size: 0.9rem; }
+.flash-success { background: #e3f9e5; color: #1b5e20; border: 1px solid #a3d9a5; }
+.flash-error { background: #ffe3e3; color: #8b1f1f; border: 1px solid #f1a9a9; }
+
+/* Transaction type tags */
+.tag { padding: 2px 8px; border-radius: 12px; font-size: 0.75rem; text-transform: capitalize; }
+.tag-deposit { background: #e3f9e5; color: #1b5e20; }
+.tag-withdraw { background: #fff3e0; color: #8a5300; }
+.tag-transfer_in { background: #e3f0ff; color: #1f3a5f; }
+.tag-transfer_out { background: #f0e3ff; color: #4a1f6f; }
+
+.muted { color: #7b8794; }
