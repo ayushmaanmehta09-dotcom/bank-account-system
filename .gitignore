@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+
+# App data (the JSON "database" is generated at runtime)
+bank_data.json
+
+# OS
+.DS_Store
+
+# Presentation files kept outside the repo
+*.pdf
+*.pptx
