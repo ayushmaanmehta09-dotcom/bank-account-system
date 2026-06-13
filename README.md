@@ -49,6 +49,13 @@ The web routes only talk to `BankService`, and `BankService` is the only thing
 that talks to the models and the storage. So the rules stay in one place and the
 interface could be swapped out without touching them.
 
+## The web interface
+
+The pages are plain HTML rendered by Flask with some CSS. From the browser you
+can add customers, open accounts, deposit, withdraw, transfer between accounts,
+and see each account's transaction history. There is also a light/dark mode
+toggle that remembers your choice.
+
 ## Running it
 
 ```bash
